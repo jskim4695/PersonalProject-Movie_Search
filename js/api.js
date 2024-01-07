@@ -1,4 +1,4 @@
-function searchMovies() {
+function printMovies() {
     // TMDB Api
     const options = {
         method: 'GET',
@@ -47,4 +47,3 @@ function searchMovies() {
             console.log('데이터를 불러오는 중에 오류가 발생했습니다:', error);
         });
 }
-searchMovies()
