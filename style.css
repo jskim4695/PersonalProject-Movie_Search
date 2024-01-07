@@ -2,24 +2,15 @@ body {
     background: black;
 }
 
+.main {
+    margin-top: 40px;
+}
+
 .nav_contents {
     justify-content: space-between;
     list-style-type: none;
     display: flex;
     background-color: black;
-}
-
-.profile {
-    width: 50px;
-    height: 50px; 
-    border-radius: 70%;
-    overflow: hidden;
-}
-
-.profile > img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .pro_title {
@@ -33,21 +24,31 @@ body {
 
 .search_box {
     height: 50px;
-    line-height: 50px;
 }
 
 .search_contents {
     width: 250px;
-    margin: 0 auto;
+    margin: auto;
+    margin-top: 10px;
     color: white;
     display: flex;
-    gap: 20px;
+    gap: 10px;
+}
+
+.search_contents > input {
+    border-radius: 5px;
 }
 
 .search_button {
-    color: black;
+    color: white;
+    background-color: red;
+    height: 35px;
+    width: 65px;
     border-style: solid;
-    border-color: white;
+    border-color: red;
+    border-radius: 10px;
+    line-height: 30px;
+    font-weight: 700;
 }
 
 .movie-card {
@@ -72,15 +73,20 @@ body {
     margin: 0 auto;
 }
 
+.movie_overview {
+    max-height: 200px;
+    min-height: 200px;
+    overflow: hidden;
+}
+
 .movie-card {
-    background-color: aqua;
     border-radius: 20px;
     max-width: 270px;
     background-color: #777777;
     margin: 10px 20px;
 }
 .movie-card:hover {
-    background-color: gray;
+    background-color: #999999;
     border-color: white;
     border-width: 2px;
     border-top-width: 0;
@@ -90,4 +96,19 @@ body {
 
 .movie-card > h3, p {
     text-align: center;
+}
+
+/* 스크롤바 배경색 */
+::-webkit-scrollbar {
+    background-color: black;
+}
+
+/* 스크롤바 핸들의 색상 */
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
 }
