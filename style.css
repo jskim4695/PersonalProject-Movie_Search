@@ -37,11 +37,18 @@ body {
 }
 
 .search_contents {
-    width: 100px;
+    width: 250px;
     margin: 0 auto;
     color: white;
+    display: flex;
+    gap: 20px;
 }
 
+.search_button {
+    color: black;
+    border-style: solid;
+    border-color: white;
+}
 
 .movie-card {
     width: 250px;
