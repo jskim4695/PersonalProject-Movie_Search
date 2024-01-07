@@ -12,23 +12,25 @@
     <header>
         <nav>
             <ul class="nav_contents">
-                <li class="profile">
-                    <img src="https://avatars.githubusercontent.com/u/140699909?v=4" alt="git_my_basic">
+                <li class="nav_logo">
+                    <img
+                    src="https://static.spartacodingclub.kr/TeamSparta-Inc/scc-frontend/assets/icons/logo-active.png"
+                    alt="내배캠 로고">
                 </li>
-                <li class="pro_title">내배캠 최고 평점 영화</li>
-                <li class="nav_logo"><img
-                        src="https://static.spartacodingclub.kr/TeamSparta-Inc/scc-frontend/assets/icons/logo-active.png"
-                        alt="내배캠 로고"></li>
+                <li class="pro_title" style="margin-left: 60px; font-weight: 600;">내배캠 최고 평점 영화</li>
+                <li >
+                    <div class="search_box">
+                        <div class="search_contents">
+                            <input type="text" id="search_input" autofocus>
+                            <button class="search_button" id="search_button" onkeypress="show_name(event)">검색</button>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
+
     <div class="main">
-        <div class="search_box">
-            <div class="search_contents">
-                <input type="text" id="search_input">
-                <button class="search_button" id="search_button">검색</button>
-            </div>
-        </div>
         <div class="card_box">
             <div class="card_list"></div>
         </div>
@@ -41,7 +43,7 @@
             const query = document.getElementById('search_input').value;
             searchMovies(query);
         });
-
+        
         printMovies()
     </script>
 </body>

@@ -28,15 +28,24 @@ function printMovies() {
                     <div class="movie-card" data-id="${_id}">
                         <img src="https://image.tmdb.org/t/p/w500${_poster_path}">
                         <h3>${_title}</h3>
-                        <p>${_overview}</p>
+                        <p class="movie_overview">${_overview}</p>
                         <p>Rating: ${_vote_average}</p>
                     </div>
                 `;
                 cardList.insertAdjacentHTML('beforeend', temp_html);
             });
 
-            const movieCards = document.querySelectorAll('.movie-card');
-            movieCards.forEach(card => {
+            const cardScroll = document.querySelectorAll('.movie-card');
+            cardScroll.forEach(card => {
+                const overview = card.querySelector('.movie_overview');
+                if (overview.scrollHeight > overview.clientHeight) {
+                    overview.style.overflowY = 'scroll'; // 스크롤이 생기도록 overflowY 속성을 'scroll'로 설정
+                }
+            });
+
+        
+            const cardsAlert = document.querySelectorAll('.movie-card');
+            cardsAlert.forEach(card => {
                 card.addEventListener('click', function() {
                     let movieId = this.getAttribute('data-id');
                     alert(`영화 id: ${movieId}`);
