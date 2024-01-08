@@ -40,19 +40,15 @@ const searchMovies = (query) => {
                 }
                 cardList.innerHTML = '';
 
-                match_movie.forEach(a => {
-                    let _title = a['title'];
-                    let _overview = a['overview'];
-                    let _poster_path = a['poster_path'];
-                    let _vote_average = a['vote_average'];
-                    let _id = a['id'];
+                match_movie.forEach((movie) => {
+                const { title, overview, poster_path, vote_average, id } = movie;
 
                     let temp_html = `
-                        <div class="movie-card" data-id="${_id}">
-                            <img src="https://image.tmdb.org/t/p/w500${_poster_path}">
-                            <h3>${_title}</h3>
-                            <p class="movie_overview">${_overview}</p>
-                            <p>Rating: ${_vote_average}</p>
+                        <div class="movie-card" data-id="${id}">
+                            <img src="https://image.tmdb.org/t/p/w500${poster_path}">
+                            <h3>${title}</h3>
+                            <p class="movie_overview">${overview}</p>
+                            <p>Rating: ${vote_average}</p>
                         </div>
                     `;
                     cardList.insertAdjacentHTML('beforeend', temp_html);
