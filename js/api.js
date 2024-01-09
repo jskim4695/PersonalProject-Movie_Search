@@ -1,4 +1,4 @@
-function printMovies() {
+export default function printMovies() {
     // TMDB Api
     const options = {
         method: 'GET',
